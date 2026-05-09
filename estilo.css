@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #63ceff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background: #63ceff;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffd369;
+}
+
+#main-nav {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#footer-principal {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+.seccion-hero {
+    background: linear-gradient(to right, #63ceff, #928cff);
+    color: white;
+    padding: 60px;
+    text-align: center;
+}
+
+.card-info {
+    background: white;
+    width: 80%;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-info h2 {
+    margin-bottom: 15px;
+    color: #63ceff;
+}
+
+.btn-accion {
+    background: #63ceff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-accion:hover {
+    background: #63ceff;
+}
+
+.input-formulario {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form {
+    width: 60%;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tabla-servicios {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+.tabla-servicios th,
+.tabla-servicios td {
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+}
+
+.tabla-servicios th {
+    background: #63ceff;
+    color: white;
+}
