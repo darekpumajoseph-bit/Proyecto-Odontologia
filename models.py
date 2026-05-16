@@ -48,7 +48,7 @@ class HistoriaClinica(BaseModel):
     paciente_id: int = Field(gt=0, description="ID del paciente")
     odontologo_id: int = Field(gt=0, description="ID del odontólogo")
     fecha_registro: date = Field(default_factory=date.today, description="Fecha de atención")
-    diagnostico: str = Field( description="Diagnóstico médico")
+    diagnostico: str = Field(min_length=10, description="Diagnóstico médico")
     observaciones: Optional[str] = Field(None, description="Notas adicionales")
 
 class ProveedorOdontologico(BaseModel):
