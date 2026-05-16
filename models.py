@@ -34,7 +34,7 @@ class Cita(BaseModel):
     paciente_id: int = Field(gt=0, description="ID del paciente asociado")
     odontologo_id: int = Field(gt=0, description="ID del odontólogo asignado")
     fecha_hora: datetime = Field(description="Fecha y hora (YYYY-MM-DD HH:MM:SS)")
-    motivo: str = Field( max_length=250, description="Motivo de la consulta")
+    motivo: str = Field( min_lenght=5, max_length=250, description="Razon de la consulta")
     estado: str = Field(default="Pendiente", description="Pendiente, Completada, Cancelada")
 
 class Tratamiento(BaseModel):
