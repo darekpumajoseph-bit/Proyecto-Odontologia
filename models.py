@@ -12,9 +12,9 @@ app = FastAPI(
 
 class Paciente(BaseModel):
     id: int = Field(gt=0, description="ID interno mayor a 0")
-    documento: str = Field(description="Cédula o TI")
-    nombre: str = Field(min_length=3,max_length=50,  description="Nombres completos")
-    apellido: str = Field(min_length=3,max_length=50,  description="Apellidos completos")
+    documento: str = Field(min_length=5,max_length=15,description="Cédula o TI")
+    nombre: str = Field(min_length=3,max_length=50, description="Nombres completos")
+    apellido: str = Field(min_length=3,max_length=50, description="Apellidos completos")
     email: EmailStr = Field(description="Correo electrónico")
     telefono: str = Field(min_length=7, max_length=15, description="Teléfono celular o fijo")
     fecha_nacimiento: date = Field(description="Fecha de nacimiento YYYY-MM-DD")
