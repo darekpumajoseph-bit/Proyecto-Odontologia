@@ -39,7 +39,7 @@ class Cita(BaseModel):
 
 class Tratamiento(BaseModel):
     id: int = Field(gt=0, description="ID del tratamiento mayor a 0")
-    nombre: str = Field( max_length=100, description="Nombre del tratamiento")
+    nombre: str = Field(min_length=3, max_length=100, description="Nombre del tratamiento")
     costo: float = Field(gt=0, description="Precio mayor a 0")
     duracion_estimada_dias: int = Field(gt=0, description="Duración aproximada en días")
 
