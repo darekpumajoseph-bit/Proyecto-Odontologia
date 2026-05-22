@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OdontoSoft - Sistema Integrado</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- CABECERA PRINCIPAL -->
+    <header class="header">
+        <h1>OdontoSoft</h1>
+        <p>Software de gestión para odontología</p>
+    </header>
+
+    <!-- MENÚ DE NAVEGACIÓN (FLEXBOX) -->
+    <nav class="nav-menu">
+        <a href="#" onclick="mostrarSeccion('inicio')">Inicio</a>
+        <a href="#" onclick="mostrarSeccion('nosotros')">Quiénes Somos</a>
+        <a href="#" onclick="mostrarSeccion('contacto')">Contacto</a>
+        <a href="#" onclick="mostrarSeccion('panel-dr')">Panel Odontólogo</a>
+        <a href="#" onclick="mostrarSeccion('panel-cliente')">Panel Cliente</a>
+    </nav>
+
+    <!-- SECCIÓN 1: INICIO -->
+    <main id="inicio" class="contenedor seccion activo">
+        <div class="flex-contenido">
+            <div class="flex-columna">
+                <h2>Bienvenidos a OdontoSoft</h2>
+                <p>La solución definitiva para optimizar la gestión de tu clínica dental. Controla citas, historias clínicas y facturación en un solo lugar de forma ágil y segura.</p>
+            </div>
+            <div class="flex-columna destaque">
+                <h3>¿Por qué elegirnos?</h3>
+                <p>Diseñado de la mano de profesionales de la salud dental para garantizar un entorno rápido, intuitivo y sin complicaciones diarias.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- SECCIÓN 2: QUIÉNES SOMOS -->
+    <section id="nosotros" class="contenedor seccion">
+        <div class="flex-contenido">
+            <div class="flex-columna">
+                <h2>Nuestra Misión</h2>
+                <p>Digitalizar los consultorios odontológicos del país, permitiendo a los especialistas enfocarse por completo en lo que mejor hacen: cuidar de sus pacientes.</p>
+            </div>
+            <div class="flex-columna">
+                <h2>El Equipo de Desarrollo</h2>
+                <p>Somos un grupo apasionado por la innovación tecnológica aplicable a la salud, comprometidos con el rendimiento de tu consultorio.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: CONTACTO -->
+    <section id="contacto" class="contenedor seccion">
+        <div class="flex-contenido">
+            <div class="flex-columna">
+                <h2>Información de Contacto</h2>
+                <p style="margin-bottom: 10px;"><strong>Dirección:</strong> Av. Principal #123, Clínica Dental Urbana</p>
+                <p style="margin-bottom: 10px;"><strong>Correo:</strong> soporte@odontosoft.com</p>
+                <p style="margin-bottom: 25px;"><strong>Teléfono / WhatsApp:</strong> +123 456 7890</p>
+                <a href="https://wa.me/1234567890" target="_blank" class="btn-whatsapp">
+                    Escríbenos por WhatsApp
+                </a>
+            </div>
+            <div class="flex-columna">
+                <form class="formulario" onsubmit="event.preventDefault(); alert('Mensaje enviado con éxito');">
+                    <h3>Envíanos un mensaje</h3>
+                    <input type="text" placeholder="Tu Nombre" required>
+                    <input type="email" placeholder="Tu Correo" required>
+                    <textarea placeholder="¿En qué podemos ayudarte?" rows="4" style="width: 100%; margin-top: 15px; padding: 10px;" required></textarea>
+                    <button type="submit">Enviar Formulario</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: PANEL ODONTÓLOGO -->
+    <section id="panel-dr" class="seccion">
+        <div class="panel-titulo">
+            <h2>Panel de Control Profesional</h2>
+            <p>Bienvenido, Dr. Alejandro</p>
+        </div>
+        <div class="panel">
+            <div class="card">
+                <h3>Agenda</h3>
+                <p>12 Citas para hoy</p>
+                <button class="btn-card">Ver Citas</button>
+            </div>
+            <div class="card">
+                <h3>Pacientes</h3>
+                <p>Historiales Clínicos</p>
+                <button class="btn-card">Buscar</button>
+            </div>
+            <div class="card">
+                <h3>Facturas</h3>
+                <p>Reportes del mes</p>
+                <button class="btn-card">Ver Reporte</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 5: PANEL CLIENTE -->
+    <section id="panel-cliente" class="seccion">
+        <div class="panel-titulo">
+            <h2>Mi Portal de Paciente</h2>
+            <p>Bienvenido, Carlos Pérez</p>
+        </div>
+        <div class="panel">
+            <div class="card">
+                <h3>Mis Citas</h3>
+                <p>Próxima: Mañana 10:00 AM</p>
+                <button class="btn-card">Agendar Nueva</button>
+            </div>
+            <div class="card">
+                <h3>Tratamientos</h3>
+                <p>Evolución y recetas</p>
+                <button class="btn-card">Ver Detalles</button>
+            </div>
+            <div class="card">
+                <h3>Mis Pagos</h3>
+                <p>Saldos y recibos</p>
+                <button class="btn-card">Pagar Online</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- LÓGICA DE INTERCAMBIO DE PESTAÑAS -->
+    <script>
+        function mostrarSeccion(idSeccion) {
+            // Ocultar todas las secciones removiendo la clase 'activo'
+            const secciones = document.querySelectorAll('.seccion');
+            secciones.forEach(sec => sec.classList.remove('activo'));
+
+            // Mostrar únicamente la sección seleccionada sumándole la clase 'activo'
+            document.getElementById(idSeccion).classList.add('activo');
+        }
+    </script>
+</body>
+</html>
