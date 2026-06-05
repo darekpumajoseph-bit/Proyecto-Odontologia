@@ -1,47 +1,108 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <title>Inicio</title>
-  <link rel="stylesheet" href="estilo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SenaDent - Sistema de Gestión Odontológica</title>
+    
+    <!-- Fuentes de Google Fonts específicas para Software de Gestión (Legibilidad y modernidad) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="pagina 1.css">
 </head>
-
 <body>
 
-  <header>
-    <h1>Proyecto Odontologico</h1>
-  </header>
+   
+    <div class="dashboard-container">
+        
+        <!-- Barra Lateral de Navegación del Sistema -->
+        <aside class="sidebar">
+            <div class="logo-area">
+                <span class="icono-software">🦷</span>
+                <h1 class="logo-texto">Sena<span>Dent</span></h1>
+            </div>
+            <nav class="menu-navegacion">
+                <a href="#" class="menu-item activo">📊 Panel de Control</a>
+                <a href="#" class="menu-item">📅 Agenda de Citas</a>
+                <a href="#" class="menu-item">👥 Pacientes</a>
+                <a href="#" class="menu-item">📋 Historias Clínicas</a>
+                <a href="#" class="menu-item">⚙️ Configuración</a>
+            </nav>
+        </aside>
 
-  <nav id="main-nav">
-    <a href="index.html">Inicio</a>
-    <a href="nosotros.html">Nosotros</a>
-    <a href="login.html">Login</a>
-    <a href="registro.html">Registro</a>
-    <a href="contacto.html">Contacto</a>
-    <a href="panel.html">Panel</a>
-  </nav>
+        <main class="contenido-principal">
+            
+            <header class="header-modulo">
+                <div>
+                    <h2 class="titulo-modulo">Gestión de Pacientes e Historias Clínicas</h2>
+                    <p class="subtitulo-modulo">Módulo Operativo Integrado • Proyecto Productivo ADSO</p>
+                </div>
+                <button class="btn-accion">+ Nueva Cita Médica</button>
+            </header>
 
-  <section class="seccion-hero">
-    <h2>Bienvenido a Nuestra Odontologia</h2>
-    <p>Diseño básico, moderno y llamativo.</p>
-  </section>
+            <section class="tarjetas-indicadores">
+                <div class="kpi card-azul">
+                    <h3>Citas Agendadas</h3>
+                    <div class="valor">18</div>
+                    <p class="detalle-kpi">Para el día de hoy</p>
+                </div>
+                <div class="kpi card-cyan">
+                    <h3>Nuevos Pacientes</h3>
+                    <div class="valor">124</div>
+                    <p class="detalle-kpi">Registrados este mes</p>
+                </div>
+                <div class="kpi card-blanca">
+                    <h3>Tratamientos Activos</h3>
+                    <div class="valor">42</div>
+                    <p class="detalle-kpi">En fase de ortodoncia/diseño</p>
+                </div>
+            </section>
 
-  <div class="card-info">
-    <h2>Sobre nuestra odontologia</h2>
+            <section class="seccion-datos">
+                <h3 class="titulo-tabla">Monitoreo de Pacientes en Sala de Espera</h3>
+                
+                <div class="contenedor-tabla">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Paciente</th>
+                                <th>Identificación</th>
+                                <th>Procedimiento / Tratamiento</th>
+                                <th>Odontólogo Asignado</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><b>Carlos Mario Vega</b></td>
+                                <td>CC 1.023.456.xxx</td>
+                                <td class="texto-italica">Diseño de Sonrisa Complejo</td>
+                                <td>Dr. Alejandro Ríos</td>
+                                <td><span class="estado en-proceso">En Consulta</span></td>
+                            </tr>
+                            <tr>
+                                <td><b>Laura Sofía Benítez</b></td>
+                                <td>TI 1.094.221.xxx</td>
+                                <td class="texto-italica">Endodoncia Molar Posterior</td>
+                                <td>Dra. Claudia Gómez</td>
+                                <td><span class="estado espera">En Espera</span></td>
+                            </tr>
+                            <tr>
+                                <td><b>Andrés Felipe Castro</b></td>
+                                <td>CC 80.765.xxx</td>
+                                <td class="texto-italica">Profilaxis Avanzada & Detartraje</td>
+                                <td>Dr. Alejandro Ríos</td>
+                                <td><span class="estado completado">Finalizado</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
 
-    <p>
-      Esta odontologia fue desarrollado utilizando HTML y CSS.
-      Cuenta con diferentes páginas conectadas entre sí.
-    </p>
-
-    <button class="btn-accion">Conocer Más</button>
-  </div>
-
-  <footer id="footer-principal">
-    <p>Proyecto Formativo SENA - 2025</p>
-  </footer>
+        </main>
+    </div>
 
 </body>
-
 </html>

@@ -1,0 +1,231 @@
+html, body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f6f9; 
+    color: #2c3e50; 
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 260px;
+    background-color: #0f172a; 
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.icono-software {
+    font-size: 2rem;
+}
+
+.logo-texto {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 1.6rem;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.logo-texto span {
+    color: #0ed5d3; 
+}
+
+.menu-navegacion {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu-item {
+    color: #94a3b8;
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover, .menu-item.activo {
+    background-color: #1e293b;
+    color: #ffffff;
+}
+
+.menu-item.activo {
+    border-left: 4px solid #0056b3;
+}
+
+.contenido-principal {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.header-modulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 20px;
+}
+
+.titulo-modulo {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 2rem; 
+    color: #1e293b;
+    margin: 0 0 5px 0;
+}
+
+.subtitulo-modulo {
+    font-size: 0.95rem;
+    color: #64748b;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-accion {
+    background-color: #0056b3; 
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 86, 179, 0.2);
+}
+
+.tarjetas-indicadores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.kpi {
+    padding: 25px;
+    border-radius: 14px;
+    box-sizing: border-box;
+}
+
+.kpi h3 {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 15px 0;
+}
+
+.kpi .valor {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem; 
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.kpi .detalle-kpi {
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.card-azul {
+    background-color: #0056b3;
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 86, 179, 0.15);
+}
+.card-azul .detalle-kpi { color: #bfdbfe; }
+
+.card-cyan {
+    background-color: #0ed5d3;
+    color: #0f172a;
+    box-shadow: 0 8px 20px rgba(14, 213, 211, 0.15);
+}
+.card-cyan .detalle-kpi { color: #1e293b; }
+
+.card-blanca {
+    background-color: #ffffff;
+    color: #1e293b;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+}
+.card-blanca h3 { color: #64748b; }
+.card-blanca .detalle-kpi { color: #64748b; }
+
+.seccion-datos {
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 30px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.titulo-tabla {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #0f172a;
+}
+
+.contenedor-tabla {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+th {
+    background-color: #f8fafc;
+    color: #64748b;
+    padding: 16px;
+    font-weight: 600;
+    border-bottom: 2px solid #edf2f7;
+}
+
+td {
+    padding: 16px;
+    border-bottom: 1px solid #edf2f7;
+    color: #334155;
+}
+
+.texto-italica {
+    font-style: italic; 
+}
+
+
+.estado {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.estado.en-proceso { background-color: #e0f2fe; color: #0369a1; }
+.estado.espera { background-color: #fef3c7; color: #d97706; }
+.estado.completado { background-color: #dcfce7; color: #15803d; }
